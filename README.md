@@ -1,9 +1,15 @@
 # Gesture-Presentation
-A Gesture-Controlled Presentation Tool
+A presentation tool that can be controlled with hand-gestures in real time to perform basic operations.
+
+## Supported Operations/Gestures
+- Next Slide
+- Previous Slide
+- Pointer
+- Annotator
+- Eraser
 
 # Installation
-### Install python 3
-- go to link: https://www.python.org/downloads/ and install python 3 on your machine
-### Install MidiaPipe
+- Install [Python 3](https://www.python.org/downloads/)
 
+- Install [MediaPipe](https://google.github.io/mediapipe/getting_started/install.html)
 
