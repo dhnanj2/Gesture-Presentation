@@ -1,6 +1,10 @@
 # Gesture-Presentation
 A presentation tool that can be controlled with hand-gestures in real time to perform basic operations.
 
+#### Language:  Python
+#### Framework: MediaPipe
+#### Libraries: OpenCV, Numpy
+
 ## Supported Operations/Gestures
 - Next Slide
 - Previous Slide
