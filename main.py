@@ -67,14 +67,14 @@ while True:
         yVal = int(np.interp(lmList[8][1], [150, height-150], [0, height]))
         indexFinger = xVal, yVal
 
-        # gesture 1 : Turn Left (move to previous slide)
+        # gesture 1 : Turn Left (move to next slide)
         # hand gesture = swipe right hand towards left <---
         if lmList and (fingers==[1,1,1,1,1] or fingers==[0,1,1,1,1]) and hand['type']=='Left': 
             cur_lpinky_x = lmList[19][0] # current x coordinate of PINKY_PIP 
             
             # if left swipe is greater than threshold than change slide number
             if cur_lpinky_x - prev_lpinky_x <= -125: 
-                imgNum = imgNum-1 if imgNum>0 else len(pathImages)-1
+                imgNum = (imgNum+1)%len(pathImages)
                 # erase the previous annotations
                 annotations = [[]]                                  
                 annotationNum = -1                               
@@ -83,14 +83,14 @@ while True:
             prev_lpinky_x=cur_lpinky_x
             prev_rpinky_x = width
 
-        # gesture 2 : Turn Right (move to next slide)
+        # gesture 2 : Turn Right (move to previous slide)
         # hand gesture = swipe Left hand towards Right --->
         if lmList and (fingers==[1,1,1,1,1] or fingers==[0,1,1,1,1]) and hand['type']=='Right': 
             cur_rpinky_x = lmList[19][0] # current x coordinate of PINKY_PIP 
             
             # if left swipe is greater than threshold than change slide number
             if cur_rpinky_x - prev_rpinky_x >= 125: 
-                imgNum = imgNum+1 if imgNum+1<len(pathImages) else 0
+                imgNum = imgNum-1 if imgNum>0 else len(pathImages)-1
                 # erase the previous annotations
                 annotations = [[]]                                  
                 annotationNum = -1                               
