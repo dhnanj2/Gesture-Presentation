@@ -1,2 +1,2 @@
-opencv==4.6.0
-mediapipe==0.8.11
+opencv
+mediapipe
