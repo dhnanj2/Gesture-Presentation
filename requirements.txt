@@ -1,2 +1,4 @@
+flask
+gunicorn
 opencv-contrib-python-headless
 mediapipe
