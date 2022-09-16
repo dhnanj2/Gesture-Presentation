@@ -148,5 +148,5 @@ def index():
         # if key pressed is 'ESC' then exit
         if key == 27: break
 
-if __name__=="__main__"
+if __name__=="__main__":
     app.run()
